@@ -1,0 +1,13 @@
+cd /home/jonny/workspace/wordpress-develop;
+git reset HEAD --hard;
+git pull;
+source /home/jonny/.nvm/nvm.sh;
+rm -rf vendor;
+rm -rf node_module;
+nvm install;
+nvm use;
+npm install;
+npm run build:dev;
+composer install;
+cp tests/phpunit/includes/object-cache.php build/wp-content/object-cache.php;
+wp plugin update --all;
