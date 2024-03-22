@@ -11,3 +11,4 @@ npm run build:dev;
 composer install;
 cp tests/phpunit/includes/object-cache.php build/wp-content/object-cache.php;
 wp plugin update --all;
+wp core update-db --network;
